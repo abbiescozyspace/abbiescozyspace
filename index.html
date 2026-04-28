@@ -1,110 +1,108 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://w3.org viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍉</text></svg>">
->
-<style>
-  :root {
-    --melon-pink: #ff8a8a;
-    --rind-green: #4ade80;
-    --seed-black: #2d2d2d;
-    --rainbow-gradient: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
-  }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>abbiescozyspace 🍉</title>
+  
+  <!-- TINY WATERMELON ICON -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://w3.org viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍉</text></svg>">
+  
+  <style>
+    :root {
+      --melon-pink: #ff8a8a;
+      --rind-green: #4ade80;
+      --seed-black: #2d2d2d;
+      --rainbow-gradient: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
+    }
 
-  body {
-    background-color: #fffdfd;
-    color: var(--seed-black);
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    overflow-x: hidden;
-  }
+    body {
+      background-color: #fffdfd;
+      color: var(--seed-black);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
 
-  /* Navigation */
-  nav {
-    position: sticky;
-    top: 0;
-    background: white;
-    padding: 15px;
-    text-align: center;
-    border-bottom: 2px solid var(--melon-pink);
-    z-index: 1000;
-  }
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 2px solid var(--melon-pink);
+      z-index: 1000;
+    }
 
-  nav a {
-    text-decoration: none;
-    color: var(--seed-black);
-    margin: 0 15px;
-    font-weight: bold;
-    font-size: 14px;
-    transition: 0.3s;
-  }
+    nav a {
+      text-decoration: none;
+      color: var(--seed-black);
+      margin: 0 15px;
+      font-weight: bold;
+    }
 
-  nav a:hover { color: var(--melon-pink); }
+    /* HEADER */
+    header {
+      background: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 8px solid var(--rind-green);
+    }
 
-  /* Header */
-  header {
-    background: white;
-    padding: 60px 20px;
-    text-align: center;
-    border-bottom: 8px solid var(--rind-green);
-  }
+    h1 { font-family: 'Brush Script MT', cursive; font-size: 4.5rem; color: var(--melon-pink); margin: 0; }
 
-  h1 { font-family: 'Brush Script MT', cursive; font-size: 4.5rem; color: var(--melon-pink); margin: 0; }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
 
-  .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+    /* MOOD METER */
+    .mood-meter {
+      background: white;
+      padding: 25px;
+      border-radius: 30px;
+      border: 3px solid var(--melon-pink);
+      text-align: center;
+      margin: 20px 0;
+    }
 
-  /* PHOTO DIARY SECTION */
-  .photo-diary {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 20px 0;
-    scrollbar-width: thin;
-  }
+    .mood-btn {
+      border: none;
+      background: #f8f8f8;
+      padding: 10px 15px;
+      border-radius: 50px;
+      cursor: pointer;
+      margin: 5px;
+    }
 
-  .polaroid {
-    background: white;
-    padding: 10px 10px 30px 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    min-width: 200px;
-    transform: rotate(-1deg);
-    border: 1px solid #eee;
-  }
+    /* RAINBOW DIVIDER */
+    .rainbow-divider {
+      height: 10px;
+      background: var(--rainbow-gradient);
+      border-radius: 10px;
+      margin: 30px 0;
+    }
 
-  .photo-box {
-    width: 100%;
-    height: 180px;
-    background: #f9f9f9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ccc;
-    font-size: 12px;
-    border-radius: 4px;
-  }
+    /* BLOG POSTS */
+    .blog-post {
+      background: white;
+      border-radius: 30px;
+      padding: 30px;
+      margin-bottom: 20px;
+      border: 2px solid #fff0f0;
+    }
 
-  /* BLOG / STORY SECTION */
-  .blog-feed { margin-top: 50px; }
+    /* GUEST NOOK */
+    .guest-nook {
+      background: #f0fff4;
+      padding: 30px;
+      border-radius: 40px;
+      border: 3px dashed var(--rind-green);
+    }
 
-  .blog-post {
-    background: white;
-    border-radius: 30px;
-    padding: 30px;
-    margin-bottom: 30px;
-    border: 2px solid #fff0f0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-  }
-
-  .blog-date { font-size: 12px; color: var(--melon-pink); font-weight: bold; text-transform: uppercase; }
-
-  .blog-title { font-size: 1.8rem; margin: 10px 0; color: var(--seed-black); }
-
-  .rainbow-line { height: 6px; background: var(--rainbow-gradient); border-radius: 10px; margin: 20px 0; width: 100px; }
-
-  /* Watermelon Rain */
-  .watermelon-drop { position: fixed; top: -50px; font-size: 24px; z-index: 999; animation: fall linear infinite; pointer-events: none; }
-  @keyframes fall { to { transform: translateY(105vh); } }
-
-</style>
+    /* WATERMELON RAIN */
+    .watermelon-drop { position: fixed; top: -50px; font-size: 24px; z-index: 999; animation: fall linear infinite; pointer-events: none; }
+    @keyframes fall { to { transform: translateY(105vh); } }
+  </style>
 </head>
 <body>
 
@@ -112,70 +110,62 @@
 
 <nav>
   <a href="#home">Home</a>
-  <a href="#photos">Photo Diary</a>
   <a href="#stories">Story Time</a>
   <a href="#nook">Guest Nook</a>
 </nav>
 
 <header id="home">
   <h1>abbiescozyspace</h1>
-  <p>🍉 Photo Diary & Daily Adventures 🍉</p>
+  <p>🍉 Sweet, Cozy, & Full of Cats 🐈</p>
 </header>
 
 <div class="container">
 
-  <!-- PHOTO DIARY -->
-  <section id="photos">
-    <h2 style="color: var(--rind-green);">📸 My Photo Diary</h2>
-    <p>Scroll sideways to see my favorite moments!</p>
-    <div class="photo-diary">
-      <div class="polaroid">
-        <div class="photo-box">Photo Placeholder</div>
-        <p style="text-align:center; font-family: cursive;">Morning Walk ☁️</p>
-      </div>
-      <div class="polaroid" style="transform: rotate(2deg);">
-        <div class="photo-box">Photo Placeholder</div>
-        <p style="text-align:center; font-family: cursive;">New 2hollis Vinyl 🎧</p>
-      </div>
-      <div class="polaroid">
-        <div class="photo-box">Photo Placeholder</div>
-        <p style="text-align:center; font-family: cursive;">Best Watermelon! 🍉</p>
-      </div>
-      <div class="polaroid" style="transform: rotate(-2deg);">
-        <div class="photo-box">Photo Placeholder</div>
-        <p style="text-align:center; font-family: cursive;">Sunset Vibes 🌅</p>
-      </div>
+  <!-- MOOD METER -->
+  <div class="mood-meter">
+    <h3>Current Mood: <span id="current-emoji">✨</span></h3>
+    <p id="current-text">Welcome to my space!</p>
+    <button class="mood-btn" onclick="updateMood('🍉 Refreshing', '✨')">🍉 Refreshing</button>
+    <button class="mood-btn" onclick="updateMood('🌈 Sweet', '🍭')">🌈 Sweet</button>
+    <button class="mood-btn" onclick="updateMood('😴 Dreamy', '☁️')">😴 Dreamy</button>
+  </div>
+
+  <div class="rainbow-divider"></div>
+
+  <!-- MUSIC SECTION -->
+  <div style="background: var(--seed-black); color: white; padding: 20px; border-radius: 20px; display: flex; align-items: center; gap: 15px;">
+    <span style="font-size: 25px;">🎧</span>
+    <span><b>Now Playing:</b> jeans — 2hollis</span>
+  </div>
+
+  <!-- BLOG SECTION -->
+  <section id="stories">
+    <h2 style="color: var(--melon-pink); margin-top: 40px;">📝 Story Time</h2>
+    <div class="blog-post">
+      <h4>April 29: My Perfect Snack Day 🫐</h4>
+      <p>Today was all about rainbow strips and blueberries. There is something so cozy about snacking while working on my new site...</p>
     </div>
   </section>
 
-  <!-- BLOG FEED -->
-  <section id="stories" class="blog-feed">
-    <h2 style="color: var(--melon-pink);">📝 Story Time</h2>
-    
-    <div class="blog-post">
-      <span class="blog-date">April 29, 2024</span>
-      <h3 class="blog-title">First Post: Welcome to the Space!</h3>
-      <div class="rainbow-line"></div>
-      <p>I finally finished building my little watermelon corner. I wanted a place to share my love for cats, 2hollis, and of course, my favorite snacks. Life has been busy, but this is my place to slow down...</p>
-      <p><i>Read more...</i></p>
-    </div>
-
-    <div class="blog-post">
-      <span class="blog-date">April 28, 2024</span>
-      <h3 class="blog-title">The Hunt for Rainbow Strips</h3>
-      <div class="rainbow-line"></div>
-      <p>Is it just me, or are the best snacks always the hardest to find? Today was a mission, but I finally found the perfect blueberries and rainbow strips for my movie night...</p>
-      <p><i>Read more...</i></p>
-    </div>
+  <!-- GUEST NOOK -->
+  <section id="nook" class="guest-nook" style="margin-top: 40px;">
+    <h3>Abbie's Guest Nook 🧸</h3>
+    <p>Leave a note or say hi!</p>
+    <input type="text" placeholder="Your message..." style="width: 70%; padding: 10px; border-radius: 20px; border: 1px solid #ddd;">
+    <button style="background: var(--rind-green); color: white; border: none; padding: 10px 20px; border-radius: 20px;">Send</button>
+    <p style="font-size: 12px; margin-top: 20px;">💌 <a href="mailto:mburuabigael14@gmail.com">mburuabigael14@gmail.com</a></p>
   </section>
 
 </div>
 
-<footer>
-  <p style="text-align: center; padding: 40px;">built with love & seeds by abbie • <a href="mailto:mburuabigael14@gmail.com" style="color: var(--melon-pink);">Email Me</a></p>
-</footer>
-
 <script>
+  // MOOD UPDATER
+  function updateMood(text, emoji) {
+    document.getElementById('current-text').innerText = text;
+    document.getElementById('current-emoji').innerText = emoji;
+  }
+
+  // WATERMELON RAIN
   function createRain() {
     const container = document.getElementById('rain-container');
     const emojis = ['🍉', '🫐', '🌈', '🐾'];
