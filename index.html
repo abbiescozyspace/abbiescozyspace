@@ -182,6 +182,33 @@
   }
   createRain();
 </script>
+<script>
+  // MAGIC WAND CODE ✨🍉
+  document.addEventListener('mousemove', function(e) {
+    const sparkle = document.createElement('div');
+    sparkle.innerHTML = Math.random() > 0.5 ? '✨' : '🍉';
+    sparkle.style.position = 'fixed';
+    sparkle.style.left = e.clientX + 'px';
+    sparkle.style.top = e.clientY + 'px';
+    sparkle.style.fontSize = '20px';
+    sparkle.style.pointerEvents = 'none';
+    sparkle.style.zIndex = '9999';
+    sparkle.style.transition = 'all 1s ease-out';
+    
+    document.body.appendChild(sparkle);
+
+    // Make the sparkle float away and disappear
+    setTimeout(() => {
+      sparkle.style.transform = `translate(${(Math.random() - 0.5) * 100}px, ${(Math.random() - 0.5) * 100}px) scale(0)`;
+      sparkle.style.opacity = '0';
+    }, 50);
+
+    // Clean up the code so it doesn't get slow
+    setTimeout(() => {
+      sparkle.remove();
+    }, 1000);
+  });
+</script>
 
 </body>
 </html>
